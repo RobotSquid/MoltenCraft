@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "MoltenCraft",
+    "name": "MoltenCraft",
+    "description": "A mod all about molten metals!!",
+    "version": "1.01",
+    "mcversion": "1.7.10",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "RobotSquid"
+    ],
+    "credits": "To myself, I love you!!",
+    "logoFile": "",
+    "screenshots": [
+    ],
+    "parent":"",
+    "dependencies": [
+    ]
+  }
+]
