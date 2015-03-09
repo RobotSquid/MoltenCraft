@@ -1,6 +1,7 @@
 package com.robotsquid.moltencraft;
 
 import com.robotsquid.moltencraft.handler.ConfigurationHandler;
+import com.robotsquid.moltencraft.init.ModItems;
 import com.robotsquid.moltencraft.proxy.IProxy;
 import com.robotsquid.moltencraft.reference.Reference;
 import com.robotsquid.moltencraft.utility.LogHelper;
@@ -23,8 +24,13 @@ public class MoltenCraft
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        LogHelper.info("Reading Configs...");
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        LogHelper.info("Reading Configs done!");
+        LogHelper.info("Registering Items...");
+        ModItems.init();
+        LogHelper.info("Items Registered!");
         LogHelper.info("Pre-Init Done!");
     }
 

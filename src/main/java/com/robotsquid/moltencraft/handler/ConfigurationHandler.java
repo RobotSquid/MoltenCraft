@@ -34,9 +34,9 @@ public class ConfigurationHandler
             configuration.save();
         }
 
-        LogHelper.info("isAwesome: " + ConfigurationReference.isAwesome);
-        LogHelper.info("isActive: " + ConfigurationReference.isActive);
-        LogHelper.info("isHard: " + ConfigurationReference.isHard);
+        //LogHelper.info("isAwesome: " + ConfigurationReference.isAwesome);
+        //LogHelper.info("isActive: " + ConfigurationReference.isActive);
+        //LogHelper.info("isHard: " + ConfigurationReference.isHard);
     }
 
     @SubscribeEvent
