@@ -1,6 +1,7 @@
 package com.robotsquid.moltencraft;
 
 import com.robotsquid.moltencraft.handler.ConfigurationHandler;
+import com.robotsquid.moltencraft.init.ModBlocks;
 import com.robotsquid.moltencraft.init.ModItems;
 import com.robotsquid.moltencraft.proxy.IProxy;
 import com.robotsquid.moltencraft.reference.Reference;
@@ -31,6 +32,9 @@ public class MoltenCraft
         LogHelper.info("Registering Items...");
         ModItems.init();
         LogHelper.info("Items Registered!");
+        LogHelper.info("Registering Blocks...");
+        ModBlocks.init();
+        LogHelper.info("Blocks Registered!");
         LogHelper.info("Pre-Init Done!");
     }
 
