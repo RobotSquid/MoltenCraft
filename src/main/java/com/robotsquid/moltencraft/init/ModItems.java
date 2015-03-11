@@ -2,6 +2,7 @@ package com.robotsquid.moltencraft.init;
 
 import com.robotsquid.moltencraft.item.ItemFluidWrench;
 import com.robotsquid.moltencraft.item.ItemMoltenCraft;
+import com.robotsquid.moltencraft.item.ItemTitaniumIngot;
 import com.robotsquid.moltencraft.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -9,9 +10,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems
 {
     public static final ItemMoltenCraft fluidWrench = new ItemFluidWrench();
+    public static final ItemTitaniumIngot ingotTitanium = new ItemTitaniumIngot();
 
     public static void init()
     {
         GameRegistry.registerItem(fluidWrench, "fluidWrench");
+        GameRegistry.registerItem(ingotTitanium, "ingotTitanium");
     }
 }
