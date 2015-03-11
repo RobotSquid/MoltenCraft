@@ -1,5 +1,6 @@
 package com.robotsquid.moltencraft.block;
 
+import com.robotsquid.moltencraft.creativetab.CreativeTabMoltenCraft;
 import com.robotsquid.moltencraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class BlockMoltenCraft extends Block
     public BlockMoltenCraft(Material material)
     {
         super(material);
+        this.setCreativeTab(CreativeTabMoltenCraft.MOLTENCRAFT_TAB);
     }
 
     public BlockMoltenCraft()

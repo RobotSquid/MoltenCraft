@@ -1,5 +1,6 @@
 package com.robotsquid.moltencraft.item;
 
+import com.robotsquid.moltencraft.creativetab.CreativeTabMoltenCraft;
 import com.robotsquid.moltencraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class ItemMoltenCraft extends Item
     public ItemMoltenCraft()
     {
         super();
+        this.setCreativeTab(CreativeTabMoltenCraft.MOLTENCRAFT_TAB);
     }
 
     @Override
