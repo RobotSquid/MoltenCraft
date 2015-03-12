@@ -1,6 +1,7 @@
-item.moltencraft:fluidWrench.name=FluidWrench
+item.moltencraft:fluidWrench.name=FluidWrench 21.0
 item.moltencraft:ingotTitanium.name=Titanium Ingot
 
 tile.moltencraft:blockTitanium.name=Block of Titanium
+tile.moltencraft:oreTitanium.name=Titanium Ore
 
 itemGroup.moltencraft=MoltenCraft

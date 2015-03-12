@@ -3,6 +3,7 @@ package com.robotsquid.moltencraft;
 import com.robotsquid.moltencraft.handler.ConfigurationHandler;
 import com.robotsquid.moltencraft.init.ModBlocks;
 import com.robotsquid.moltencraft.init.ModItems;
+import com.robotsquid.moltencraft.init.ModRecipes;
 import com.robotsquid.moltencraft.proxy.IProxy;
 import com.robotsquid.moltencraft.reference.Reference;
 import com.robotsquid.moltencraft.utility.LogHelper;
@@ -41,6 +42,9 @@ public class MoltenCraft
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        LogHelper.info("Initializing Recipes...");
+        ModRecipes.init();
+        LogHelper.info("Recipes Initialized!");
         LogHelper.info("Init Done!");
     }
 
