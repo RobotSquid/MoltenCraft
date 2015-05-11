@@ -14,8 +14,8 @@ public class GuiConfiguration extends GuiConfig
         super(guiScreen,
                 new ConfigElement(ConfigurationHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
                 Reference.MOD_ID,
-                false,
-                false,
+                true,
+                true,
                 GuiConfig.getAbridgedConfigPath(ConfigurationHandler.configuration.toString()));
     }
 }

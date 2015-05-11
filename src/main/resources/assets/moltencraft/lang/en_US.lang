@@ -1,7 +1,45 @@
-item.moltencraft:fluidWrench.name=FluidWrench 21.0
+item.moltencraft:fluidWrench.name=FluidWrench [WIP]
+
+item.moltencraft:axeTitanium.name=Titanium Axe
+item.moltencraft:shovelTitanium.name=Titanium Shovel
+item.moltencraft:swordTitanium.name=Titanium Sword
+item.moltencraft:pickaxeTitanium.name=Titanium Pickaxe
+item.moltencraft:hoeTitanium.name=Titanium Hoe
+
+item.moltencraft:helmetTitanium.name=Titanium Helmet
+item.moltencraft:chestplateTitanium.name=Titanium Chestplate
+item.moltencraft:leggingsTitanium.name=Titanium Leggings
+item.moltencraft:bootsTitanium.name=Titanium Boots
+
+item.moltencraft:fireStick.name=FireStick [WIP]
+item.moltencraft:witherStick.name=WitherStick
+item.moltencraft:adminSword.name=Admin Sword
+
 item.moltencraft:ingotTitanium.name=Titanium Ingot
 
+item.moltencraft:blendBlazium.name=Blazium Blend
+item.moltencraft:ingotBlazium.name=Blazium Ingot
+
+item.moltencraft:dustWither.name=Wither Powder
+item.moltencraft:dustTitanium.name=Pulverized Titanium
+
+item.moltencraft:blendWitherium.name=Witherium Blend
+item.moltencraft:ingotWitherium.name=Witherium Ingot
+
+item.moltencraft:appleTitanium.name=Titanium Apple [OP]
+
+item.moltencraft:gunLaser.name=Laser Gun
+
+item.moltencraft:witherPearl.name=Wither Pearl
+item.moltencraft:crystalLaser.name=Laser Crystal
+item.moltencraft:focusLaser.name=Laser Focus
+
 tile.moltencraft:blockTitanium.name=Block of Titanium
-tile.moltencraft:oreTitanium.name=Titanium Ore
+tile.moltencraft:blockBlazium.name=Blazium Block
+tile.moltencraft:blockWitherium.name=Witherium Block
+
+tile.moltencraft:oreTitanium.name=Titanium Ore [WIP]
+
+tile.moltencraft:nightMaker.name=Night Maker
 
 itemGroup.moltencraft=MoltenCraft

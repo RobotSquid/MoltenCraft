@@ -1,18 +1,19 @@
 package com.robotsquid.moltencraft;
 
+import com.robotsquid.moltencraft.compat.CompatTE;
 import com.robotsquid.moltencraft.handler.ConfigurationHandler;
-import com.robotsquid.moltencraft.init.ModBlocks;
-import com.robotsquid.moltencraft.init.ModItems;
-import com.robotsquid.moltencraft.init.ModRecipes;
+import com.robotsquid.moltencraft.init.*;
 import com.robotsquid.moltencraft.proxy.IProxy;
 import com.robotsquid.moltencraft.reference.Reference;
-import com.robotsquid.moltencraft.utility.LogHelper;
+import com.robotsquid.moltencraft.world.WorldGenMC;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version= Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class MoltenCraft
@@ -26,31 +27,41 @@ public class MoltenCraft
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        LogHelper.info("Reading Configs...");
+        //Configs
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.info("Reading Configs done!");
-        LogHelper.info("Registering Items...");
+        //Items
         ModItems.init();
-        LogHelper.info("Items Registered!");
-        LogHelper.info("Registering Blocks...");
+        //Tools
+        ModTools.init();
+        //Armor
+        ModArmor.init();
+        //Blocks
         ModBlocks.init();
-        LogHelper.info("Blocks Registered!");
-        LogHelper.info("Pre-Init Done!");
+        //TileEntities
+        ModTileEntities.init();
+        //Entities
+        ModEntities.init();
+        //Renderers
+        ModRenderers.init();
+        //WorldGen
+        GameRegistry.registerWorldGenerator(new WorldGenMC(), 1);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        LogHelper.info("Initializing Recipes...");
+        //Recipes
         ModRecipes.init();
-        LogHelper.info("Recipes Initialized!");
-        LogHelper.info("Init Done!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        LogHelper.info("Post-Init Done!");
+        //TE Compat
+        if (Loader.isModLoaded("ThermalExpansion"))
+        {
+            CompatTE.init();
+        }
     }
 }
