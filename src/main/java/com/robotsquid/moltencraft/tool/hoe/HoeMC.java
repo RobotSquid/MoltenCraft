@@ -1,6 +1,6 @@
 package com.robotsquid.moltencraft.tool.hoe;
 
-import com.robotsquid.moltencraft.creativetab.CreativeTabMC;
+import com.robotsquid.moltencraft.MoltenCraft;
 import com.robotsquid.moltencraft.reference.Reference;
 import net.minecraft.item.ItemHoe;
 
@@ -9,7 +9,7 @@ public class HoeMC extends ItemHoe
     public HoeMC(ToolMaterial material, String unlocalizedName)
     {
         super(material);
-        this.setCreativeTab(CreativeTabMC.MOLTENCRAFT_TAB);
+        this.setCreativeTab(MoltenCraft.MOLTENCRAFT_TAB);
         this.setUnlocalizedName(getModUnlocalizedName(unlocalizedName));
         this.setTextureName(getModUnlocalizedName(unlocalizedName));
         this.setMaxStackSize(1);

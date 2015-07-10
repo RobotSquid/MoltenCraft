@@ -1,19 +1,22 @@
 package com.robotsquid.moltencraft.creativetab;
 
 import com.robotsquid.moltencraft.init.ModTools;
-import com.robotsquid.moltencraft.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class CreativeTabMC
+public class CreativeTabMC extends CreativeTabs
 {
-    public static final CreativeTabs MOLTENCRAFT_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase())
+    public CreativeTabMC(int id, String unlocalizedName)
     {
+        super(id, unlocalizedName);
+    }
 
-        @Override
-        public Item getTabIconItem()
-        {
-            return ModTools.fluidWrench;
-        }
-    };
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Item getTabIconItem()
+    {
+        return ModTools.fluidWrench;
+    }
 }

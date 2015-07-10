@@ -2,6 +2,7 @@ package com.robotsquid.moltencraft.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.util.*;
@@ -14,6 +15,7 @@ public class EntityLaserBeam extends EntityArrow
     private int ticksInAir = 0;
     private float damage;
     private float explosionRadius;
+    private String special = "none";
 
     public EntityLaserBeam(World world)
     {
@@ -21,12 +23,13 @@ public class EntityLaserBeam extends EntityArrow
         this.setSize(0.5F, 1.0F);
     }
 
-    public EntityLaserBeam(World world, EntityLivingBase player, float damage, float explosionRadius)
+    public EntityLaserBeam(World world, EntityLivingBase player, float damage, float explosionRadius, String special)
     {
         super(world, player, 2.0F);
         this.setSize(0.5F, 1.0F);
         this.damage = damage;
         this.explosionRadius = explosionRadius;
+        this.special = special;
     }
 
     @Override
@@ -119,6 +122,11 @@ public class EntityLaserBeam extends EntityArrow
                 }
 
                 movingobjectposition.entityHit.attackEntityFrom(damagesource, this.damage);
+            }
+
+            if (this.special.equalsIgnoreCase("lightning"))
+            {
+                this.worldObj.addWeatherEffect(new EntityLightningBolt(this.worldObj, (double)this.posX, (double)this.posY, (double)this.posZ));
             }
 
             this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, this.explosionRadius, true);

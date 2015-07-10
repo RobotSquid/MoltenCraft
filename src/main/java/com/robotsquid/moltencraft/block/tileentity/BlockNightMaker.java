@@ -1,10 +1,8 @@
 package com.robotsquid.moltencraft.block.tileentity;
 
 import com.robotsquid.moltencraft.block.BlockTileEntityMC;
-import com.robotsquid.moltencraft.reference.Reference;
 import com.robotsquid.moltencraft.tileentity.TileNightMaker;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
@@ -12,20 +10,19 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class BlockNightMaker extends BlockTileEntityMC
 {
-    private IIcon[] icons = new IIcon[6];
-
     public BlockNightMaker()
     {
-        super(Material.iron, "nightMaker", 1.0F);
+        super(Material.iron, "nightMaker", 50.0F);
+        this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+        this.setResistance(2000.0F);
     }
 
     @Override
-    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
+    public TileEntity createNewTileEntity(World world, int par1)
     {
         return new TileNightMaker();
     }
@@ -58,26 +55,20 @@ public class BlockNightMaker extends BlockTileEntityMC
     }
 
     @Override
-    public void registerBlockIcons(IIconRegister iconRegister)
+    public int getRenderType()
     {
-        for (int i = 0; i < 6; i++)
-        {
-            switch (i)
-            {
-                case 0:
-                case 1:
-                    icons[i] = iconRegister.registerIcon(String.format("%s:nightMakerTop", Reference.MOD_ID.toLowerCase()));
-                    break;
-                default:
-                    icons[i] = iconRegister.registerIcon(String.format("%s:nightMakerSide", Reference.MOD_ID.toLowerCase()));
-                    break;
-            }
-        }
+        return -1;
     }
 
     @Override
-    public IIcon getIcon(int side, int meta)
+    public boolean isOpaqueCube()
     {
-        return icons[side];
+        return false;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock()
+    {
+        return false;
     }
 }

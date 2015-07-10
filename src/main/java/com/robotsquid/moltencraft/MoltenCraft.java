@@ -1,11 +1,11 @@
 package com.robotsquid.moltencraft;
 
 import com.robotsquid.moltencraft.compat.CompatTE;
+import com.robotsquid.moltencraft.creativetab.CreativeTabMC;
 import com.robotsquid.moltencraft.handler.ConfigurationHandler;
 import com.robotsquid.moltencraft.init.*;
 import com.robotsquid.moltencraft.proxy.IProxy;
 import com.robotsquid.moltencraft.reference.Reference;
-import com.robotsquid.moltencraft.world.WorldGenMC;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -13,11 +13,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version= Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class MoltenCraft
 {
+    public static CreativeTabs MOLTENCRAFT_TAB = new CreativeTabMC(CreativeTabs.getNextID(), "moltencraft");
+
     @Mod.Instance(Reference.MOD_ID)
     public static MoltenCraft instance;
 
@@ -45,7 +47,7 @@ public class MoltenCraft
         //Renderers
         ModRenderers.init();
         //WorldGen
-        GameRegistry.registerWorldGenerator(new WorldGenMC(), 1);
+        ModWorldGen.init();
     }
 
     @Mod.EventHandler

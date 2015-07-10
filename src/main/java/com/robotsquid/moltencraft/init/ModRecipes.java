@@ -1,20 +1,25 @@
 package com.robotsquid.moltencraft.init;
 
+import com.robotsquid.moltencraft.crafting.LaserFocusRecipe;
 import com.robotsquid.moltencraft.crafting.LaserGunRecipe;
-import com.robotsquid.moltencraft.crafting.NBTShapedOutRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.RecipeSorter;
 
 public class ModRecipes
 {
     public static void init()
     {
+        RecipeSorter.register("moltencraft:laserGun", LaserGunRecipe.class, RecipeSorter.Category.SHAPED, "after:minecraft:shaped");
+        RecipeSorter.register("moltencraft:laserFocus", LaserFocusRecipe.class, RecipeSorter.Category.SHAPED, "after:minecraft:shaped");
+
         GameRegistry.addRecipe(new LaserGunRecipe(new ItemStack(ModTools.gunLaser), " tt", "c f", "t  ", 't', new ItemStack(ModItems.ingotTitanium), 'c', new ItemStack(ModItems.crystalLaser), 'f', new ItemStack(ModItems.focusLaser)));
 
-        GameRegistry.addRecipe(new NBTShapedOutRecipe(new ItemStack(ModItems.focusLaser), "displayName", "Damage", "  t", " sp", "  t", 't', new ItemStack(ModItems.ingotTitanium), 's', new ItemStack(Items.iron_sword), 'p', new ItemStack(Blocks.glass_pane)));
-        GameRegistry.addRecipe(new NBTShapedOutRecipe(new ItemStack(ModItems.focusLaser), "displayName", "Explosion", "  t", " gp", "  t", 't', new ItemStack(ModItems.ingotTitanium), 'g', new ItemStack(Items.gunpowder), 'p', new ItemStack(Blocks.glass_pane)));
+        GameRegistry.addRecipe(new LaserFocusRecipe(new ItemStack(ModItems.focusLaser), "Damage", " t", "sp", " t", 't', new ItemStack(ModItems.ingotTitanium), 's', new ItemStack(Items.iron_sword), 'p', new ItemStack(Blocks.glass_pane)));
+        GameRegistry.addRecipe(new LaserFocusRecipe(new ItemStack(ModItems.focusLaser), "Explosion", " t", "gp", " t", 't', new ItemStack(ModItems.ingotTitanium), 'g', new ItemStack(Items.gunpowder), 'p', new ItemStack(Blocks.glass_pane)));
+        GameRegistry.addRecipe(new LaserFocusRecipe(new ItemStack(ModItems.focusLaser), "Lightning", " t", "lp", " t", 't', new ItemStack(ModItems.ingotTitanium), 'l', new ItemStack(Items.emerald), 'p', new ItemStack(Blocks.glass_pane)));
 
         GameRegistry.addSmelting(ModBlocks.oreTitanium, new ItemStack(ModItems.ingotTitanium), 0.0F);
         GameRegistry.addSmelting(ModItems.blendBlazium, new ItemStack(ModItems.ingotBlazium), 10.0F);

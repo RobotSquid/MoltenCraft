@@ -2,8 +2,10 @@ package com.robotsquid.moltencraft.init;
 
 import com.robotsquid.moltencraft.reference.ConfigurationReference;
 import com.robotsquid.moltencraft.reference.Reference;
+import com.robotsquid.moltencraft.tool.ToolChestPlacer;
 import com.robotsquid.moltencraft.tool.ToolFluidWrench;
 import com.robotsquid.moltencraft.tool.ToolLaserGun;
+import com.robotsquid.moltencraft.tool.ToolLightningHammer;
 import com.robotsquid.moltencraft.tool.axe.AxeMC;
 import com.robotsquid.moltencraft.tool.hoe.HoeMC;
 import com.robotsquid.moltencraft.tool.pickaxe.PickaxeMC;
@@ -32,10 +34,13 @@ public class ModTools
 
     public static final ToolFluidWrench fluidWrench = new ToolFluidWrench();
     public static final ToolLaserGun gunLaser = new ToolLaserGun();
+    public static final ToolChestPlacer chestPlacer = new ToolChestPlacer();
+    public static final ToolLightningHammer lightningHammer = new ToolLightningHammer();
 
     public static void init()
     {
         GameRegistry.registerItem(fluidWrench, "fluidWrench");
+        GameRegistry.registerItem(lightningHammer, "lightningHammer");
 
         GameRegistry.registerItem(swordTitanium, "swordTitanium");
 
@@ -46,6 +51,8 @@ public class ModTools
         GameRegistry.registerItem(pickaxeTitanium, "pickaxeTitanium");
 
         GameRegistry.registerItem(hoeTitanium, "hoeTitanium");
+
+        GameRegistry.registerItem(chestPlacer, "chestPlacer");
 
         if (ConfigurationReference.enableOPTools)
         {

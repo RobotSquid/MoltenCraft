@@ -11,9 +11,10 @@ item.moltencraft:chestplateTitanium.name=Titanium Chestplate
 item.moltencraft:leggingsTitanium.name=Titanium Leggings
 item.moltencraft:bootsTitanium.name=Titanium Boots
 
-item.moltencraft:fireStick.name=FireStick [WIP]
+item.moltencraft:fireStick.name=FireStick
 item.moltencraft:witherStick.name=WitherStick
-item.moltencraft:adminSword.name=Admin Sword
+item.moltencraft:adminSword.name=Admin Sword [MOD]
+item.moltencraft:chestPlacer.name=Dungeon Chest Placer [WIP, MOD]
 
 item.moltencraft:ingotTitanium.name=Titanium Ingot
 
@@ -29,6 +30,9 @@ item.moltencraft:ingotWitherium.name=Witherium Ingot
 item.moltencraft:appleTitanium.name=Titanium Apple [OP]
 
 item.moltencraft:gunLaser.name=Laser Gun
+item.moltencraft:lightningHammer.name=Lightning Hammer
+
+item.moltencraft:itemNightMaker.name=Night Maker
 
 item.moltencraft:witherPearl.name=Wither Pearl
 item.moltencraft:crystalLaser.name=Laser Crystal

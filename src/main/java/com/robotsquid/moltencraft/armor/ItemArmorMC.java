@@ -1,6 +1,6 @@
 package com.robotsquid.moltencraft.armor;
 
-import com.robotsquid.moltencraft.creativetab.CreativeTabMC;
+import com.robotsquid.moltencraft.MoltenCraft;
 import com.robotsquid.moltencraft.reference.Reference;
 import com.robotsquid.moltencraft.utility.StringHelper;
 import net.minecraft.entity.Entity;
@@ -17,7 +17,7 @@ public class ItemArmorMC extends ItemArmor
         this.textureName = textureName;
         this.setUnlocalizedName(StringHelper.getModUnlocalizedName(unlocalizedName));
         this.setTextureName(StringHelper.getModUnlocalizedName(unlocalizedName));
-        this.setCreativeTab(CreativeTabMC.MOLTENCRAFT_TAB);
+        this.setCreativeTab(MoltenCraft.MOLTENCRAFT_TAB);
     }
 
     @Override
