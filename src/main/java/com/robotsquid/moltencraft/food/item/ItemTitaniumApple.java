@@ -1,4 +1,4 @@
-package com.robotsquid.moltencraft.item.food;
+package com.robotsquid.moltencraft.food.item;
 
 import com.robotsquid.moltencraft.MoltenCraft;
 import com.robotsquid.moltencraft.utility.StringHelper;
