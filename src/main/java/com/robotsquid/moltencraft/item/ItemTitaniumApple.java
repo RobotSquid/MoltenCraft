@@ -1,6 +1,6 @@
 package com.robotsquid.moltencraft.item.food;
 
-import com.robotsquid.moltencraft.creativetab.CreativeTabMC;
+import com.robotsquid.moltencraft.MoltenCraft;
 import com.robotsquid.moltencraft.utility.StringHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
@@ -16,7 +16,7 @@ public class ItemTitaniumApple extends ItemFood
         super(8, 2.0F, false);
         this.setUnlocalizedName(StringHelper.getModUnlocalizedName("appleTitanium"));
         this.setTextureName(StringHelper.getModUnlocalizedName("appleTitanium"));
-        this.setCreativeTab(CreativeTabMC.MOLTENCRAFT_TAB);
+        this.setCreativeTab(MoltenCraft.MOLTENCRAFT_TAB);
         this.setMaxStackSize(16);
     }
 
@@ -46,3 +46,4 @@ public class ItemTitaniumApple extends ItemFood
         }
     }
 }
+
